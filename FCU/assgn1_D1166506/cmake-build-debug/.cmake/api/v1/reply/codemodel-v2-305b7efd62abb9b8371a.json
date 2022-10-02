@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/C++/FCU/assgn1_D1166506/cmake-build-debug",
-		"source" : "D:/C++/FCU/assgn1_D1166506"
+		"build" : "D:/GitHub/C/FCU/assgn1_D1166506/cmake-build-debug",
+		"source" : "D:/GitHub/C/FCU/assgn1_D1166506"
 	},
 	"version" : 
 	{

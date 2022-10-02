@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/C++/FCU/assgn1_D1166506/cmake-build-debug"
+			"value" : "d:/GitHub/C/FCU/assgn1_D1166506/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -194,7 +194,7 @@
 					"value" : "C compiler"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/Program Files/mingw64/bin/gcc.exe"
 		},
 		{
@@ -324,18 +324,6 @@
 			],
 			"type" : "STRING",
 			"value" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32"
-		},
-		{
-			"name" : "CMAKE_DEPENDS_USE_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : "FALSE"
 		},
 		{
 			"name" : "CMAKE_DLLTOOL",
@@ -551,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/C++/FCU/assgn1_D1166506"
+			"value" : "D:/GitHub/C/FCU/assgn1_D1166506"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1171,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/C++/FCU/assgn1_D1166506/cmake-build-debug"
+			"value" : "D:/GitHub/C/FCU/assgn1_D1166506/cmake-build-debug"
 		},
 		{
 			"name" : "assgn1_D1166506_IS_TOP_LEVEL",
@@ -1195,7 +1183,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/C++/FCU/assgn1_D1166506"
+			"value" : "D:/GitHub/C/FCU/assgn1_D1166506"
 		}
 	],
 	"kind" : "cache",
