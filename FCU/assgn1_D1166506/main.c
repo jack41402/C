@@ -65,7 +65,7 @@ int main()
                 printf ("\n") ;
                 continue ;
             }
-            //If doesn't encounter the bottom layer, print as normal.
+            //If it doesn't encounter the bottom layer, print as normal.
             printf ("#") ;
             for (int k=1 ; k<=2*(j-1)-1 ; ++k) printf ("@") ;
             printf ("#\n") ;
@@ -74,7 +74,7 @@ int main()
     }
     for (int i=1 ; i<=height ; ++i)
     {
-        //確認樹葉跟樹幹大小
+        //print the space and trunk
         for (int j=1 ; j<=space-width/2 ; ++j) printf (" ") ;
         for (int j=1 ; j<=width ; ++j) printf ("|") ;
         printf ("\n") ;
