@@ -76,7 +76,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/GitHub/C/FCU/assgn1_D1166506/main.c">
+		<Unit filename="D:/GitHub/C/FCU/assgn1_D1166506/assgn1_D1166506.c">
 			<Option target="assgn1_D1166506"/>
 		</Unit>
 		<Unit filename="D:/GitHub/C/FCU/assgn1_D1166506/CMakeLists.txt">

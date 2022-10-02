@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/GitHub/C/FCU/assgn1_D1166506/main.c" "CMakeFiles/assgn1_D1166506.dir/main.c.obj" "gcc" "CMakeFiles/assgn1_D1166506.dir/main.c.obj.d"
+  "D:/GitHub/C/FCU/assgn1_D1166506/assgn1_D1166506.c" "CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.obj" "gcc" "CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.obj.d"
   )
 
 # Targets to which this target links.

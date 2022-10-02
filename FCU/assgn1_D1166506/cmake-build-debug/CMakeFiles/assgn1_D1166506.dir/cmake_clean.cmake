@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/assgn1_D1166506.dir/main.c.obj"
-  "CMakeFiles/assgn1_D1166506.dir/main.c.obj.d"
+  "CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.obj"
+  "CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.obj.d"
   "assgn1_D1166506.exe"
   "assgn1_D1166506.exe.manifest"
   "assgn1_D1166506.pdb"

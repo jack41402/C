@@ -128,29 +128,29 @@ assgn1_D1166506/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\assgn1_D1166506.dir\build.make CMakeFiles/assgn1_D1166506.dir/build
 .PHONY : assgn1_D1166506/fast
 
-main.obj: main.c.obj
-.PHONY : main.obj
+assgn1_D1166506.obj: assgn1_D1166506.c.obj
+.PHONY : assgn1_D1166506.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assgn1_D1166506.dir\build.make CMakeFiles/assgn1_D1166506.dir/main.c.obj
-.PHONY : main.c.obj
+assgn1_D1166506.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assgn1_D1166506.dir\build.make CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.obj
+.PHONY : assgn1_D1166506.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+assgn1_D1166506.i: assgn1_D1166506.c.i
+.PHONY : assgn1_D1166506.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assgn1_D1166506.dir\build.make CMakeFiles/assgn1_D1166506.dir/main.c.i
-.PHONY : main.c.i
+assgn1_D1166506.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assgn1_D1166506.dir\build.make CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.i
+.PHONY : assgn1_D1166506.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+assgn1_D1166506.s: assgn1_D1166506.c.s
+.PHONY : assgn1_D1166506.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\assgn1_D1166506.dir\build.make CMakeFiles/assgn1_D1166506.dir/main.c.s
-.PHONY : main.c.s
+assgn1_D1166506.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\assgn1_D1166506.dir\build.make CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.s
+.PHONY : assgn1_D1166506.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... assgn1_D1166506
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... assgn1_D1166506.obj
+	@echo ... assgn1_D1166506.i
+	@echo ... assgn1_D1166506.s
 .PHONY : help
 
 
