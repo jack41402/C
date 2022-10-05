@@ -1,3 +1,0 @@
-D:/GitHub/C/FCU/assgn1_D1166506/cmake-build-debug/CMakeFiles/assgn1_D1166506.dir
-D:/GitHub/C/FCU/assgn1_D1166506/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/GitHub/C/FCU/assgn1_D1166506/cmake-build-debug/CMakeFiles/rebuild_cache.dir
