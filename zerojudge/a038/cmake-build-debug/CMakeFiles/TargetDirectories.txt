@@ -1,0 +1,3 @@
+D:/C++/zerojudge/a038/cmake-build-debug/CMakeFiles/a038.dir
+D:/C++/zerojudge/a038/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/C++/zerojudge/a038/cmake-build-debug/CMakeFiles/rebuild_cache.dir

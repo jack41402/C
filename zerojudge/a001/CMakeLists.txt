@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(a001)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(a001 main.cpp)
