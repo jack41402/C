@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int n=1 ;
-    while (n++)
+    int n ;
+    while (cin>>n)
     {
         if (1>n || 99<n) break ;
         int digit_1 , digit_2 ;
