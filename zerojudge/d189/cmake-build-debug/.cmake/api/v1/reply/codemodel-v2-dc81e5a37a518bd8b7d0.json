@@ -49,8 +49,13 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
+<<<<<<< Updated upstream:zerojudge/d189/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-dc81e5a37a518bd8b7d0.json
 		"build" : "D:/C++/zerojudge/d189/cmake-build-debug",
 		"source" : "D:/C++/zerojudge/d189"
+=======
+		"build" : "D:/GitHub/C/FCU/assgn1_D1166506/cmake-build-debug",
+		"source" : "D:/GitHub/C/FCU/assgn1_D1166506"
+>>>>>>> Stashed changes:FCU/practice1/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-305b7efd62abb9b8371a.json
 	},
 	"version" : 
 	{

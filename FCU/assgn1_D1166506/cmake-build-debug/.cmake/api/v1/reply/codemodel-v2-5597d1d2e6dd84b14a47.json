@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "practice1",
+					"name" : "assgn1_D1166506",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "practice1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-practice1-Debug-ae482dc17b326b2ace39.json",
-					"name" : "practice1",
+					"id" : "assgn1_D1166506::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-assgn1_D1166506-Debug-69242dc3b20fc0450b92.json",
+					"name" : "assgn1_D1166506",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/GitHub/C/practice1/cmake-build-debug",
-		"source" : "D:/GitHub/C/practice1"
+		"build" : "D:/GitHub/C/FCU/assgn1_D1166506/cmake-build-debug",
+		"source" : "D:/GitHub/C/FCU/assgn1_D1166506"
 	},
 	"version" : 
 	{
