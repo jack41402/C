@@ -1,16 +1,28 @@
 #include <stdio.h>
 
+//Remember to use flag V to prevent from overflow
+
+int adder (int a , int b , int carry)
+{
+    int ans=0 ;
+    for (int i=0 ; i<=32 ; ++i)
+    {
+        int A_bit=(a>>i)&1 , B_bit=(b>>i)&1 ;
+        //Get the bit of integer variables a and b ;
+        ans |= ((((a>>i) & 1 ^ (b>>i) & 1) ^ carry)<<i) ;
+        carry = ((((a>>i)&1) & ((b>>i)&1)) | (((a>>i) & 1 ^ (b>>i) & 1) & carry)) ;
+        //the version below won't generate any warning.
+        //carry = ((A_bit & B_bit) | (((a>>i) & 1 ^ (b>>i) & 1) & carry)) ;
+    }
+    return ans ;
+}
+
 int main()
 {
-    int a , b , c , flag ;
-    do
-    {
-        printf ("Enter: ") , fflush(stdout) ;
-        fflush(stdin) ;
-        flag = scanf ("%d %d %d" , &a , &b , &c) ;
-        printf ("%d %d %d\n" , a , b , c) ;
-        printf ("%d" , flag) ;
-    }
-    while (flag != 3) ;
+    int a , b , m=0 ;
+    char sign ;
+    scanf ("%d%c%d" , &a , &sign , &b) ;
+    if (sign=='-') m = 1 , b = ~b ;
+    printf ("%d\n" , adder (a , b , m)) ;
     return 0;
 }
