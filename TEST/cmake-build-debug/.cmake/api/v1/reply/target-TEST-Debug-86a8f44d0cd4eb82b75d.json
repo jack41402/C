@@ -39,9 +39,6 @@
 			[
 				{
 					"fragment" : "-g"
-				},
-				{
-					"fragment" : "-std=gnu2x"
 				}
 			],
 			"language" : "C",
