@@ -1,3 +1,0 @@
-D:/GitHub/C/Others/zhiwei/cmake-build-debug/CMakeFiles/zhiwei.dir
-D:/GitHub/C/Others/zhiwei/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/GitHub/C/Others/zhiwei/cmake-build-debug/CMakeFiles/rebuild_cache.dir
