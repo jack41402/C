@@ -1,3 +1,0 @@
-D:/C++/zerojudge/d123/cmake-build-debug/CMakeFiles/d123.dir
-D:/C++/zerojudge/d123/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/C++/zerojudge/d123/cmake-build-debug/CMakeFiles/rebuild_cache.dir

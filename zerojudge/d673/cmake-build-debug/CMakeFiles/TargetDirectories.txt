@@ -1,3 +1,0 @@
-D:/GitHub/C/zerojudge/d673/cmake-build-debug/CMakeFiles/d673.dir
-D:/GitHub/C/zerojudge/d673/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/GitHub/C/zerojudge/d673/cmake-build-debug/CMakeFiles/rebuild_cache.dir

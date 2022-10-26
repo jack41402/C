@@ -1,3 +1,0 @@
-D:/GitHub/C/FCU/practice1/cmake-build-debug/CMakeFiles/practice1.dir
-D:/GitHub/C/FCU/practice1/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/GitHub/C/FCU/practice1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
