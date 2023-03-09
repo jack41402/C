@@ -52,9 +52,9 @@ int insertElem (List *L , ElemType e)
         else if (L->elem[i]==e) return -1;
     }
     // Overflow
-    for (int j=L->size-1 ; j>=pos ; --j)
+    for (int i=L->size-1 ; i>=pos ; --i)
     {
-        L->elem[j+1] = L->elem[j] ;
+        L->elem[i+1] = L->elem[i] ;
     }
     L->elem[pos] = e ;
     L->size++ ;
@@ -78,18 +78,53 @@ int removeElem (List *L , ElemType e)
         else if (L->elem[i]>e) return -1;
     }
     if (pos==L->size) return -1;
+    for (int i=pos ; i<L->size ; ++i)
+    {
+        L->elem[i] = L->elem[i+1] ;
+    }
+    L->size-- ;
+    if ((L->capacity-L->size)>SEGMENT*2)
+    {
+        L->elem = (ElemType *) realloc(L->elem , (L->capacity-SEGMENT) * sizeof(ElemType)) ;
+        L->capacity -= SEGMENT ;
+    }
+    return pos;
 }
 
 // Destroy the linear list L and release its memory space.
-void destroy (List *L);
+void destroy (List *L)
+{
+    free(L->elem) ;
+    L->size = 0 ;
+    L->capacity = SEGMENT ;
+}
 
 // Clear the linear list L.
-void clear (List *L);
+void clear (List *L)
+{
+    L->elem = (ElemType *) realloc(L->elem , SEGMENT * sizeof(ElemType)) ;
+    L->size = 0 ;
+    L->capacity = SEGMENT ;
+}
 
 // Check whether the linear list L is empty.
 // Returns 1 if empty; otherwise, returns 0.
-int is_empty (List L);
+int is_empty (List L)
+{
+    return L.size==0;
+}
 
 // Print elements of the linear list.
 // We add this function because of its necessity.
-void printlst (List L);
+void printlst (List L)
+{
+    printf("Linear list capacity: %3d\n" , L.capacity) ;
+    printf("Number of linear list elements: %3d\n" , L.size) ;
+    for (int i=0 ; i<L.size ; ++i)
+    {
+        printf("%3d" , L.elem[i]) ;
+        if ((i+1)%20==0) printf("\n") ;
+    }
+    if (L.size%20!=0) printf("\n") ;
+    printf("\n") ;
+}
