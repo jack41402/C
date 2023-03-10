@@ -51,7 +51,6 @@ int insertElem (List *L , ElemType e)
         if (L->elem[i]>e) break ;
         else if (L->elem[i]==e) return -1;
     }
-    // Overflow
     for (int i=L->size-1 ; i>=pos ; --i)
     {
         L->elem[i+1] = L->elem[i] ;
@@ -122,7 +121,7 @@ void printlst (List L)
     printf("Number of linear list elements: %3d\n" , L.size) ;
     for (int i=0 ; i<L.size ; ++i)
     {
-        printf("%3d" , L.elem[i]) ;
+        printf("%4d" , L.elem[i]) ;
         if ((i+1)%20==0) printf("\n") ;
     }
     if (L.size%20!=0) printf("\n") ;
