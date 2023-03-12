@@ -22,8 +22,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eb55fa41-e03a-4b4d-a101-a7bfd4e73c80" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linear_list_dynamic_set.c" beforeDir="false" afterPath="$PROJECT_DIR$/linear_list_dynamic_set.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "D:/GitHub/C/FCU/linear_list_dynamic_set",
+    "last_opened_file_path": "D:/GitHub/Cplusplus/CSES/Sliding Median",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678358077695</updated>
       <workItem from="1678358079874" duration="3108000" />
-      <workItem from="1678386989625" duration="1695000" />
+      <workItem from="1678386989625" duration="2533000" />
     </task>
     <servers />
   </component>
