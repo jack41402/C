@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.24)
+project(single_linked_order_linear_list_dynamic_set C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(single_linked_order_linear_list_dynamic_set single_linked_order_linear_list_dynamic_set_main.c single_linked_order_linear_list_dynamic_set.h single_linked_order_linear_list_dynamic_set.c)
