@@ -2,12 +2,20 @@
 #define SEGMENT 50 // The length of each segment of ordered linear list.
 typedef int ElemType ; // Integer linear list.
 
-typedef struct
+typedef struct node // Define linked list node
 {
-    ElemType *elem ; // dynamic array pointer of element type.
+    ElemType elem ; // Node data, integer
+    struct node* next ; // Node link, defined recursively
     int size ; // The number of elements in the ordered linear list, the initial value is 0.
     int capacity ; // The capacity of the ordered linear list.
-} List ;
+} Node ;
+
+// 指向節點的指標
+typedef Node* Link ; // Node link, pointer to a node.
+
+// The ordered linear list is a node pointer
+// pointing to the head node of the linked list.
+typedef Link List ;
 
 // Initialize the linear list L, set size to 0.
 void initial (List *L);
