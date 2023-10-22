@@ -4,3 +4,5 @@ project(TEST C)
 set(CMAKE_C_STANDARD 23)
 
 add_executable(TEST main.c)
+
+add_executable(house house.c)
