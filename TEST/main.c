@@ -1,82 +1,75 @@
+#include <stdlib.h>
 #include <stdio.h>
-
+#include <math.h>
+#include <string.h>
+int dectobin(unsigned long long dec, char bin[]){
+    int i = 0;
+    int binl, rsd;
+    while(1){
+        rsd= dec % 2;
+        dec = dec / 2;
+        bin[i] = rsd;
+//        printf("%d ", bin[i]);
+        i++;
+        if (dec == 0){
+            break;
+        }
+    }
+    binl = strlen(bin);
+    return binl;
+}
 int main(void) {
     setbuf(stdout, NULL);
-    // (1) Declare integer arrays A[9][9] for coefficients and C[9]
-    //     for constants (the maximum value of n is 9).
-    int n; // Rank of a linear equation system.
-    int A[9][9]; // Maximum 9 coefficients for each of maximum 9 equations.
-    int C[9]; // Maximum 9 constants.
-    int non_zero_coeff; // Flag to indicate a non_zero coefficient in an equation or for a variable.
-    int leading_term; // Flag to indicate whether a leading term or not.
-    int i, j; // Loop variables.
+    const int base=16; // Numeral base.
+    char num[9], oldnum[9]; // Hexadecimal numeral as string of length 8.
+    char binry[32] = {"0"};
+    unsigned long long value, binlen; // Integer value of the numeral.
+    unsigned power; // Power of 2, 8, or 16.
+    unsigned residual; // Remainding numbers.
+    int count; // digit count.
+    int i; // Loop variable.
 
-    do {
-        // (2) Input the rank of the linear equation system n, where 1<=n<=9.
-        do {
-            printf("Enter the rank of linear equation system (1 to 9 and 0 to stop): "); // Print a message.
-            scanf("%d", &n); // Number of coefficients of a linear equation.
-        } while (n<0 || n>9);
-        if (n==0) return 0; // Program terminates, if n is 0.
+    while (1) {
+        // (a) input a hexadecimal numeral string of length 8, including leading zeros.
+        //     You may assume the input string is a valid hexadecimal numeral with digits
+        //     and uppercase letters 'A' to 'F'.
+        printf("Input a hexadecimal numeral string of length 8, including leading zeros: ");
+        scanf("%s", num); // Input the hexadecimal numeral as a string.
+        for(i=0; i<9; i++){
+            oldnum[i] = num[i];
+        }
+        // Stop the loop and terminate the program when the numeral is "000000000".
+        if (strcmp(num, "00000000")==0) break;
 
-        // ***** Complete program of the following steps.
-        for(i=0;i<n;i++){
+        // ***** Complete the rest of the program.
 
-            printf(">>>>Enter %d coefficients and a constant for Equation %d (between -99 and 99)",n,i);
-            for(j=0;j<n;j++){
-                scanf("%d%", &A[i][j]);
+        // (b) Convert this string to a 32-bit non-negative integer with the value less
+        //     than or equal to 4,294,967,295. Print the decimal value of n without leading zeros.
+        value = 0;
+        for(i=0; i<8; i++){
+            if (num[i]>='A'){
+                num[i] = num[i] - 'A' + 10;
             }
-            scanf("%d%", &C[i]);
+            else {
+                num[i] = num[i] - '0';
+            }
+            value = value + num[i] * pow(16,(7-i));
         }
 
+        // (c) Print the value as the 32-bit binary numeral representation, including zeros, such that
+        //     every eight bits are separated by a space.
+        binlen = dectobin(value, binry);
 
-
-
-
-
-
-
-        // (3) For equation i, A[i][0] X0 +A[i][1] X1 + ... + A[i][n-1] Xn-1 = Ci, where 0<=i<=n-1,
-        //     input n integers of coefficients and a constant to store them in A[i][j]
-        //     and C[i], where 0<=j<=n-1, such that -99<=A[i][j], C[i]<=99. Verify that
-        //     (a) there is no equation with all zero coefficients, and
-        //     (b) there is no variable Xj with all zero coefficients.
-
-
-
-        printf("<<<< The linear equation system of rank %d is",n);
-        for(i=0;i<n;i++){
-            for(j=0;j<n;j++){
-                if((A!=0&&A!=1)&&A>0)
-                    printf("%d X%d",A[i][j],i);
-                else if(A==1){
-                    printf("X%d",A[i][j],i);
-                }
-
-
-
+        printf("The input hexadecimal numeral %s is of the decimal value %llu\n", oldnum, value);
+        printf("Binary value: ");
+        for (i=31; i>=0; i--){
+            printf("%c",binry[i] + '0');
+            if (i%8 == 0){
+                printf(" ");
             }
         }
-        printf("\n----------------------------------\n"); // Print a separating line.
 
-    } while (1); // Repeat the loop.
-
-
-
-
-
-
-// (4) Print the linear equation one equation in a line, leave 10 leading blanks before
-    //     each equation. For each equation, print all terms in the way that
-    //     (a) if a term is of coefficient zero, print blanks only,
-    //     (b) if a term is the first non-zero coefficient term in an equation, do not print
-    //         its operator, but print only the coefficient value and its variable name,
-    //     (c) if a coefficient is either 1 or -1, omit the coefficient value and print
-    //         operator '+' or '-', blanks, and its variable name,
-    //     (d) for coefficients other than 0, 1, and -1, print '+' or '-', coefficient
-    //         value without sign, and its variable name,
-    //     (e) Align operators '+' or '-' for the terms of the same Xi and '='
-    //         in the vertical direction.
-    // Repeat steps (2) to (4) until the value of n is 0.
-
+        printf("\n\n---------------------\n"); // Print a separate line.
+    }
+    return 0;
 }
