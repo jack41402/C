@@ -1,75 +1,57 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
+#include <stdlib.h>
 #include <string.h>
-int dectobin(unsigned long long dec, char bin[]){
-    int i = 0;
-    int binl, rsd;
-    while(1){
-        rsd= dec % 2;
-        dec = dec / 2;
-        bin[i] = rsd;
-//        printf("%d ", bin[i]);
-        i++;
-        if (dec == 0){
-            break;
-        }
+#include <ctype.h>
+#include <limits.h>
+#define max(X, Y) (((X) > (Y)) ? (X) : (Y))
+#define swap(a, b) {typeof(a) temp=a; a=b; b=temp;}
+#define debug(var) do { \
+    _Generic((var), \
+        int: printf("%s: %d\n", #var, var), \
+        unsigned int: printf("%s: %u\n", #var, var), \
+        long: printf("%s: %ld\n", #var, var), \
+        unsigned long: printf("%s: %lu\n", #var, var), \
+        long long int: printf("%s: %lld\n", #var, var), \
+        unsigned long long int: printf("%s: %llu\n", #var, var), \
+        float: printf("%s: %f\n", #var, var), \
+        double: printf("%s: %lf\n", #var, var), \
+        char: printf("%s: %c\n", #var, var), \
+        char *: printf("%s: %s\n", #var, var), \
+        default: printf("Unsupported type\n") \
+    ); \
+} while(0)
+#define debug_array(arr) do { \
+    int _size = sizeof(arr) / sizeof(arr[0]); \
+    printf("%s: [", #arr); \
+    for (int _i = 0; _i < _size; ++_i) { \
+        _Generic((arr), \
+            int*: printf("%d", arr[_i]), \
+            unsigned int*: printf("%u", arr[_i]), \
+            long*: printf("%ld", arr[_i]), \
+            unsigned long*: printf("%lu", arr[_i]), \
+            long long int*: printf("%lld", arr[_i]), \
+            unsigned long long int*: printf("%llu", arr[_i]), \
+            float*: printf("%f", arr[_i]), \
+            double*: printf("%lf", arr[_i]), \
+            char*: printf("%c", arr[_i]), \
+            char**: printf("%s", arr[_i]), \
+            default: printf("Unsupported type") \
+        ); \
+        if (_i != _size - 1) printf(", "); \
+    } \
+    printf("]\n"); \
+} while(0)
+
+int main()
+{
+    unsigned long long int num=0xFFFFFFFF ;
+    char dict[61]={} ;
+
+    for (int i=0 ; i<10 ; ++i) dict[i] = '0' + i ;
+    for (int i=0 ; i<26 ; ++i) dict[i] = 'A' + i ;
+    for (int i=0 ; i<26 ; ++i) dict[i] = 'a' + i ;
+    while (num)
+    {
+
     }
-    binl = strlen(bin);
-    return binl;
-}
-int main(void) {
-    setbuf(stdout, NULL);
-    const int base=16; // Numeral base.
-    char num[9], oldnum[9]; // Hexadecimal numeral as string of length 8.
-    char binry[32] = {"0"};
-    unsigned long long value, binlen; // Integer value of the numeral.
-    unsigned power; // Power of 2, 8, or 16.
-    unsigned residual; // Remainding numbers.
-    int count; // digit count.
-    int i; // Loop variable.
-
-    while (1) {
-        // (a) input a hexadecimal numeral string of length 8, including leading zeros.
-        //     You may assume the input string is a valid hexadecimal numeral with digits
-        //     and uppercase letters 'A' to 'F'.
-        printf("Input a hexadecimal numeral string of length 8, including leading zeros: ");
-        scanf("%s", num); // Input the hexadecimal numeral as a string.
-        for(i=0; i<9; i++){
-            oldnum[i] = num[i];
-        }
-        // Stop the loop and terminate the program when the numeral is "000000000".
-        if (strcmp(num, "00000000")==0) break;
-
-        // ***** Complete the rest of the program.
-
-        // (b) Convert this string to a 32-bit non-negative integer with the value less
-        //     than or equal to 4,294,967,295. Print the decimal value of n without leading zeros.
-        value = 0;
-        for(i=0; i<8; i++){
-            if (num[i]>='A'){
-                num[i] = num[i] - 'A' + 10;
-            }
-            else {
-                num[i] = num[i] - '0';
-            }
-            value = value + num[i] * pow(16,(7-i));
-        }
-
-        // (c) Print the value as the 32-bit binary numeral representation, including zeros, such that
-        //     every eight bits are separated by a space.
-        binlen = dectobin(value, binry);
-
-        printf("The input hexadecimal numeral %s is of the decimal value %llu\n", oldnum, value);
-        printf("Binary value: ");
-        for (i=31; i>=0; i--){
-            printf("%c",binry[i] + '0');
-            if (i%8 == 0){
-                printf(" ");
-            }
-        }
-
-        printf("\n\n---------------------\n"); // Print a separate line.
-    }
-    return 0;
 }
