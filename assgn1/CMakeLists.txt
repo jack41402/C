@@ -6,6 +6,6 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(assgn1
-        complex_D1262092.c
-        complex_D1262092.h
-        quadratic_equation_verifier_D1262092.c)
+        complex_D1265154.c
+        complex_D1265154.h
+        quadratic_equation_verifier_D1265154.c)
