@@ -3,6 +3,6 @@ project(TEST C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(TEST main.c)
-
-add_executable(house house.c)
+add_executable(TEST main.c
+        quiz1.c)
+add_executable(quiz1 quiz1.c)
